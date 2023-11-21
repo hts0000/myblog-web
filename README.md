@@ -15,6 +15,17 @@ npm run dev
 # clsx:
 npm install react-icons react-hook-form clsx
 npm install @tailwindcss/forms
+npm install -D prisma
+npx prisma init
+npm install next-auth@latest @prisma/client @next-auth/prisma-adapter bcrypt
+npm install -D @types/bcrypt
+npm install axios
+```
+
+### Prisma Push
+
+```bash
+npx prisma db push
 ```
 
 # Project Path
