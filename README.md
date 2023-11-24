@@ -20,6 +20,7 @@ npx prisma init
 npm install next-auth@latest @prisma/client @next-auth/prisma-adapter bcrypt
 npm install -D @types/bcrypt
 npm install axios
+npm install react-hot-toast
 ```
 
 ### Prisma Push
