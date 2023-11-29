@@ -21,12 +21,25 @@ npm install next-auth@latest @prisma/client @next-auth/prisma-adapter bcrypt
 npm install -D @types/bcrypt
 npm install axios
 npm install react-hot-toast
+npm install next-superjson-plugin
 ```
 
 ### Prisma Push
 
 ```bash
 npx prisma db push
+```
+
+### next-superjson-plugin
+
+**Add follow config to `next.config.js` file**
+
+```js
+const nextConfig = {
+  experimental: {
+    swcPlugins: [["next-superjson-plugin", {}]],
+  },
+};
 ```
 
 # Project Path
@@ -51,4 +64,27 @@ npx prisma db push
 │   └── vercel.svg
 ├── tailwind.config.ts
 └── tsconfig.json
+```
+
+### Error
+
+**Invalid src prop**
+
+```
+Error: Invalid src prop (https://avatars.githubusercontent.com/u/52144113?v=4) on `next/image`, hostname "avatars.githubusercontent.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+```
+
+**Add follow config to `next.config.js` file**
+
+```
+const nextConfig = {
+  images: {
+    domains: [
+      "res.cloundinary.com",
+      "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
+    ],
+  },
+}
 ```

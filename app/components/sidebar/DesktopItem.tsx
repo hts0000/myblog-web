@@ -12,7 +12,7 @@ interface DesktopItemProps {
   active?: boolean;
 }
 
-const DesktopItem = ({
+const DesktopItem: React.FC<DesktopItemProps> = ({
   label,
   icon: Icon,
   herf,

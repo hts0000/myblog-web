@@ -5,7 +5,7 @@ const useConversation = () => {
   const parasm = useParams();
 
   const conversationId = useMemo(() => {
-    if (!parasm?.onversationId) {
+    if (!parasm?.conversationId) {
       return "";
     }
 
